@@ -1,0 +1,27 @@
+<ion-view title="Comments">
+  <ion-content padding="true">
+
+  	<div class="card">
+	  <div class="item item-text-wrap">
+	    <textarea ng-model="comment.text" placeholder="Post a Comment"></textarea>
+	  </div>
+	  <div class="item item-divider">
+	    <button class="button button-royal" ng-click="addComment()">Post a comment</button>
+	  </div>
+	</div>
+
+	<div class="list list-inset">
+
+	    <div class="item item-divider">
+	      Comments of Project
+	    </div>
+
+	    <div ng-repeat="(commentId, comment) in project.comments" class="item">
+		      <p>{{ comment.text }}</p>
+		      <p>posted by {{ comment.username }}</a>
+		</div>
+	</div>
+    
+    
+  </ion-content>
+</ion-view>

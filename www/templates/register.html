@@ -1,0 +1,30 @@
+<!--
+  This template loads for the 'tab.login' state (app.js)
+-->
+<ion-view title="Register">
+  <ion-content has-tabs="true">
+  <form ng-submit="register()" name="form">
+    <div class="list list-inset">
+      <div ng-show="error||form.username.$error">
+        <p ng-show="error" class="assertive">{{error}}</p>
+        <p ng-show="form.username.$error.taken" class="assertive">Username is already taken.</p>
+        <p ng-show="form.username.$error.invalid" class="assertive">Username contains invalid characters.</p>
+      </div>
+
+      <label class="item item-input">
+        <span class="input-label">Your username</span>
+        <input type="text" ng-model="user.username" check-username name="username" >
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Your email</span>
+        <input type="email" ng-model="user.email">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Your password</span>
+        <input type="password" ng-model="user.password">
+      </label>
+      <button class="button button-calm button-block" type="submit">Register</button>
+    </div>
+  </form>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,51 @@
+<!--
+  This template loads for the 'tab.pet-detail' state (app.js)
+  'pet' is a $scope variable created in the PetCtrl controller (controllers.js)
+  The PetCtrl pulls data from the Pets service (service.js)
+  The Pets service returns an array of pet data
+-->
+<ion-view title="{{project.title}}">
+  <ion-content padding="true">
+
+  <div class="list card">
+
+  <div class="item item-avatar">
+    <img src="img/project.jpg">
+    <h2>{{project.title}}</h2>
+    <p>November 05, 1955</p>
+  </div>
+
+  <div class="item item-body">
+    <img class="full-image" src="img/images.jpg">
+    <p>
+      {{project.description}}
+    </p>
+    <p>{{ project.state }}</p>
+    <p>
+      <a href="#" class="subdued">1 Approval</a>
+      <a href="#" class="subdued">5 Comments</a>
+    </p>
+  </div>
+
+  <div class="item tabs tabs-secondary tabs-icon-left">
+    <a class="tab-item" ng-click="approve()">
+      <i class="icon ion-thumbsup"></i>
+      Approve
+    </a>
+    <a class="tab-item" ng-click="reject()">
+      <i class="icon ion-thumbsdown"></i>
+      Reject
+    </a>
+    <a class="tab-item" ng-click="gotocomment()">
+      <i class="icon ion-chatbox"></i>
+      Comment
+    </a>   
+  </div>
+
+	<p><a class="button button-small icon ion-arrow-left-b" href="#/tab/projects"> Projects to approve</a></p>
+	<p><a class="button button-small icon ion-log-out" href="#/tab/login" ng-click="logout()">Logout</a></p>
+</div>
+    
+    
+  </ion-content>
+</ion-view>
